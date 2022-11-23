@@ -1,7 +1,4 @@
-<!-- #scrollArea (scroll)="onScroll(scrollArea)" -->
+<!-- #scrollElem (scroll)="onScroll(scrollElem)" -->
 <div class="cat-table-wrapper">
-  <app-cat-table
-    [datas]="datas"
-    (reachBottomEvent)="onLoadNext()"
-  ></app-cat-table>
+  <app-cat-table [datas]="datas" (scroll)="onLoadNext()"></app-cat-table>
 </div>

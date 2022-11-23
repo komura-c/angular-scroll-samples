@@ -17,7 +17,7 @@ export class TopComponent implements OnInit {
   private isLoading = false;
   private page = 0;
   private maxPage = 4;
-  private limit = 10;
+  private limit = 15;
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
@@ -31,7 +31,7 @@ export class TopComponent implements OnInit {
   }
 
   @HostListener('window:scroll') // イベントバインディングの時はコメントアウト
-  onScroll(scrollArea: HTMLElement) {
+  onScroll(scrollElem: HTMLElement) {
     // 残りのスクロール量
     const maxScroll =
       this.document.documentElement.scrollHeight ||
